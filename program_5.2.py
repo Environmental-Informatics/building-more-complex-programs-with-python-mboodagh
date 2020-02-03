@@ -5,19 +5,26 @@ Created on Fri Jan 31 10:05:34 2020
 
 @author: mboodagh
 """
-# A fubction to check Fermant's theorem
+""" The goal of this program is to check whether 
+the Fermant's principle holds for a set of values provided by the user"""
+
+# Define a function to check Fermant's theorem and prints the results
 def check_fermat ():
-    a=input ('please enter the first number>1 ') # must turn to a positive integer
-    b=input ('please enter the second number>1 ') # must turn to a positive integer
-    c=input ('please enter the third number>1 ') # must turn to a positive integer
-    n=input ('please enter the power >3 = ') # must turn to an integer >2
+    # Ask for the inputs and turn them into integers
+    a=float(input ('please enter the first number>1 ')) # The number must be >1 to be turned into a positive integer
+    b=float(input ('please enter the second number>1 ')) # The number must be >1 to be turned into a positive integer
+    c=float(input ('please enter the third number>1 ')) # The number must be >1 to be turned into a positive integer
+    n=float(input ('please enter the power >3 = ')) # The number must be >3 to be turned into a an integer>2 
+    # turning the inputs into integers
     a=int(a)
     b=int(b)
     c=int(c)
     n=int(n)
+    # Print the outcome
     if a**n+b**n != c**n:
         print ('N0, that doesnt work')
     else:
         print('Holy smokes, Fermat was wrong')
-                
-check_fermat ()     
+        
+# run the function                
+check_fermat ()    
